@@ -1,0 +1,566 @@
+/* ========================================================
+   LILINNAWA ADMIN SIDEBAR
+   ======================================================== */
+
+:root {
+    --sidebar-width: 290px;
+
+    --maroon: #721B2F;
+    --maroon-dark: #501320;
+
+    --cream: #FAF3DE;
+    --cream-light: #FAF4E4;
+
+    --white: #FFFFFF;
+
+    --gold: #D4AF37;
+
+    --border: #E2D4B0;
+
+    --text: #4B5563;
+    --muted: #8A4B58;
+}
+
+
+/* ========================================================
+   RESET KHUSUS SIDEBAR
+   ======================================================== */
+
+.admin-sidebar,
+.admin-sidebar *,
+.admin-sidebar *::before,
+.admin-sidebar *::after {
+    box-sizing: border-box;
+}
+
+
+/* ========================================================
+   SIDEBAR UTAMA
+   ======================================================== */
+
+.admin-sidebar {
+    width: var(--sidebar-width) !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+
+    position: fixed !important;
+
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+
+    z-index: 99999 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    overflow: hidden !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: var(--cream) !important;
+
+    border-right: 2px solid #D6C49E !important;
+
+    box-shadow:
+        6px 0 24px -4px rgba(0,0,0,.12) !important;
+
+    font-family:
+        'Plus Jakarta Sans',
+        'Poppins',
+        Arial,
+        sans-serif !important;
+}
+
+
+/* ========================================================
+   BAGIAN ATAS
+   LOGO + PROFIL
+   ======================================================== */
+
+.sidebar-top {
+    width: 100% !important;
+
+    flex-shrink: 0 !important;
+
+    overflow: hidden !important;
+
+    background: var(--cream) !important;
+}
+
+
+/* ========================================================
+   LOGO
+   ======================================================== */
+
+.sidebar-logo {
+    width: 100% !important;
+
+    height: 120px !important;
+
+    min-height: 120px !important;
+    max-height: 120px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: hidden !important;
+
+    margin: 0 !important;
+    padding: 15px 20px !important;
+
+    background: var(--cream) !important;
+
+    border: none !important;
+}
+
+
+.sidebar-logo img {
+    display: block !important;
+
+    width: 155px !important;
+    height: 80px !important;
+
+    max-width: 155px !important;
+    max-height: 80px !important;
+
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    object-fit: contain !important;
+
+    object-position: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+
+    outline: none !important;
+
+    box-shadow: none !important;
+
+    transform: none !important;
+}
+
+
+/* ========================================================
+   PEMISAH
+   ======================================================== */
+
+.sidebar-divider {
+    width: calc(100% - 32px) !important;
+
+    height: 1px !important;
+
+    margin: 0 16px !important;
+
+    background: #E5D7B7 !important;
+
+    border: none !important;
+}
+
+
+.profile-divider {
+    margin-top: 10px !important;
+}
+
+
+/* ========================================================
+   PROFIL
+   ======================================================== */
+
+.sidebar-profile {
+    width: calc(100% - 32px) !important;
+
+    min-height: 62px !important;
+
+    margin: 10px 16px 0 !important;
+
+    padding: 9px 11px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 10px !important;
+
+    background: #FFFFFF !important;
+
+    border: 1px solid #E2D4B0 !important;
+
+    border-radius: 14px !important;
+
+    box-shadow:
+        0 2px 4px rgba(0,0,0,.03) !important;
+
+    overflow: hidden !important;
+}
+
+
+.profile-avatar {
+    width: 36px !important;
+    height: 36px !important;
+
+    min-width: 36px !important;
+    min-height: 36px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex-shrink: 0 !important;
+
+    border-radius: 50% !important;
+
+    background: var(--maroon) !important;
+
+    color: #FDE68A !important;
+
+    border: 1.5px solid var(--gold) !important;
+
+    font-size: 13px !important;
+    font-weight: 800 !important;
+}
+
+
+.profile-information {
+    min-width: 0 !important;
+
+    flex: 1 !important;
+
+    overflow: hidden !important;
+}
+
+
+.profile-name {
+    display: block !important;
+
+    overflow: hidden !important;
+
+    white-space: nowrap !important;
+
+    text-overflow: ellipsis !important;
+
+    color: var(--maroon) !important;
+
+    font-size: 12px !important;
+
+    font-weight: 700 !important;
+}
+
+
+.profile-role {
+    display: block !important;
+
+    margin-top: 2px !important;
+
+    color: #6B7280 !important;
+
+    font-family: monospace !important;
+
+    font-size: 10px !important;
+
+    white-space: nowrap !important;
+}
+
+
+.profile-badge {
+    flex-shrink: 0 !important;
+
+    padding: 4px 8px !important;
+
+    border-radius: 999px !important;
+
+    background: var(--maroon) !important;
+
+    color: #FFFFFF !important;
+
+    font-size: 9px !important;
+
+    font-weight: 700 !important;
+
+    white-space: nowrap !important;
+}
+
+
+/* ========================================================
+   MENU SCROLL
+   ======================================================== */
+
+.sidebar-menu-scroll {
+    width: 100% !important;
+
+    flex: 1 1 auto !important;
+
+    min-height: 0 !important;
+
+    overflow-x: hidden !important;
+
+    overflow-y: auto !important;
+
+    background: var(--cream) !important;
+
+    scrollbar-width: thin !important;
+
+    scrollbar-color: #D8C7A3 transparent !important;
+}
+
+
+.sidebar-menu-scroll::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+.sidebar-menu-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+.sidebar-menu-scroll::-webkit-scrollbar-thumb {
+    background: #D8C7A3;
+
+    border-radius: 10px;
+}
+
+
+/* ========================================================
+   NAV
+   ======================================================== */
+
+.sidebar-nav {
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    padding: 10px 16px 20px !important;
+}
+
+
+/* ========================================================
+   SECTION
+   ======================================================== */
+
+.menu-section {
+    width: 100% !important;
+
+    margin: 0 0 12px 0 !important;
+
+    padding: 0 !important;
+}
+
+
+.menu-section-title {
+    width: 100% !important;
+
+    height: 30px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    padding: 0 8px !important;
+
+    cursor: pointer !important;
+
+    color: var(--muted) !important;
+
+    font-size: 10px !important;
+
+    font-weight: 800 !important;
+
+    letter-spacing: .6px !important;
+
+    text-transform: uppercase !important;
+}
+
+
+.menu-title-left {
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 7px !important;
+}
+
+
+.menu-arrow {
+    width: 8px !important;
+
+    color: var(--maroon) !important;
+
+    font-size: 10px !important;
+
+    font-weight: 900 !important;
+}
+
+
+/* ========================================================
+   MENU ITEMS
+   ======================================================== */
+
+.menu-items {
+    width: 100% !important;
+
+    overflow: hidden !important;
+}
+
+
+.menu-item {
+    width: 100% !important;
+
+    min-height: 36px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: space-between !important;
+
+    margin: 0 0 2px 0 !important;
+
+    padding: 9px 12px !important;
+
+    color: var(--text) !important;
+
+    background: transparent !important;
+
+    border-radius: 11px !important;
+
+    text-decoration: none !important;
+
+    font-size: 12px !important;
+
+    font-weight: 600 !important;
+
+    transition:
+        background .15s ease,
+        color .15s ease !important;
+}
+
+
+.menu-item:hover {
+    background: rgba(114,27,47,.08) !important;
+
+    color: var(--maroon) !important;
+}
+
+
+.menu-item.active {
+    background: var(--maroon) !important;
+
+    color: #FFFFFF !important;
+
+    font-weight: 700 !important;
+
+    box-shadow:
+        0 4px 10px rgba(114,27,47,.22) !important;
+}
+
+
+/* ========================================================
+   NOTIFICATION
+   ======================================================== */
+
+.notification-dot {
+    width: 7px !important;
+    height: 7px !important;
+
+    min-width: 7px !important;
+
+    border-radius: 50% !important;
+
+    background: #F59E0B !important;
+
+    box-shadow: 0 0 0 2px #FFFFFF !important;
+}
+
+
+.notification-dot.green {
+    background: #10B981 !important;
+}
+
+
+/* ========================================================
+   FOOTER
+   LOGOUT
+   ======================================================== */
+
+.sidebar-footer {
+    width: 100% !important;
+
+    flex-shrink: 0 !important;
+
+    padding: 10px 9px !important;
+
+    background: var(--cream) !important;
+
+    border-top: 1px solid #E5D7B7 !important;
+}
+
+
+.logout-button {
+    width: 100% !important;
+
+    height: 34px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    background: var(--maroon) !important;
+
+    color: #FFFFFF !important;
+
+    border-radius: 9px !important;
+
+    text-decoration: none !important;
+
+    font-size: 11px !important;
+
+    font-weight: 700 !important;
+
+    box-shadow:
+        0 2px 5px rgba(0,0,0,.12) !important;
+}
+
+
+.logout-button:hover {
+    background: var(--maroon-dark) !important;
+}
+
+
+/* ========================================================
+   KONTEN UTAMA
+   ======================================================== */
+
+.admin-main {
+    margin-left: var(--sidebar-width) !important;
+
+    min-height: 100vh !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* ========================================================
+   MOBILE
+   ======================================================== */
+
+@media (max-width: 900px) {
+
+    .admin-sidebar {
+        width: 250px !important;
+    }
+
+    .admin-main {
+        margin-left: 250px !important;
+    }
+
+}

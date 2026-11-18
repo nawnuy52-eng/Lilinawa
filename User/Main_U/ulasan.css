@@ -1,0 +1,112 @@
+/* ========================================================
+   User / Main_U / ulasan.css - Ulasan & Testimoni Pelanggan
+   ======================================================== */
+.review-header {
+    margin-bottom: 24px;
+}
+
+.review-header h1 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1F2937;
+}
+
+.review-header p {
+    font-size: 14px;
+    color: #6B7280;
+    margin-top: 4px;
+}
+
+/* Submit Review Card */
+.submit-review-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    border: 1px solid #E3D5B4;
+    padding: 26px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.submit-review-card h2 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 16px;
+}
+
+.star-rating-select {
+    display: flex;
+    gap: 8px;
+    margin: 10px 0 16px;
+}
+
+.star-option {
+    font-size: 24px;
+    cursor: pointer;
+    color: #D1D5DB;
+    transition: color 0.2s;
+}
+
+.star-option:hover,
+.star-option.selected {
+    color: #F59E0B;
+}
+
+/* Review List Grid */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.review-item-card {
+    background: #FFFFFF;
+    border-radius: 18px;
+    border: 1px solid #E3D5B4;
+    padding: 22px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.review-card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.reviewer-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1F2937;
+}
+
+.reviewer-template {
+    font-size: 11px;
+    color: #721B2F;
+    font-weight: 600;
+}
+
+.review-stars {
+    color: #F59E0B;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.review-comment {
+    font-size: 13px;
+    color: #4B5563;
+    line-height: 1.5;
+}
+
+.admin-reply-box {
+    margin-top: 14px;
+    padding: 12px;
+    background: #FAF3DE;
+    border-radius: 10px;
+    font-size: 12px;
+    border-left: 3px solid #721B2F;
+}
+
+.admin-reply-box strong {
+    color: #721B2F;
+}

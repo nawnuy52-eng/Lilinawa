@@ -1,0 +1,362 @@
+/* ========================================================
+   User / Main_U / home.css - Stylesheet Halaman Beranda Klien
+   Desain Selaras & Mewah Sesuai Admin Dashboard LilinNawa
+   ======================================================== */
+.folder-path {
+    font-family: monospace;
+    font-size: 11px;
+    color: #721B2F;
+    background: #FFFFFF;
+    border: 1px solid #E4D7B8;
+    padding: 6px 14px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.welcome-header {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 20px;
+    padding: 24px 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.welcome-header h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 26px;
+    color: #721B2F;
+    font-weight: 800;
+}
+
+.welcome-header p {
+    font-size: 13px;
+    color: #6B7280;
+    margin-top: 4px;
+}
+
+.welcome-banner {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.welcome-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 24px;
+}
+
+.banner-badge {
+    background: #F59E0B;
+    color: #111827;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.banner-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.banner-sub {
+    font-size: 12px;
+    color: #FDE68A;
+    margin-top: 4px;
+}
+
+/* 4 Statistik Utama Sesuai Admin */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.card-stat {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-stat:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.card-stat.stat-emerald {
+    background: #ECFDF5;
+    border: 2px solid #A7F3D0;
+}
+
+.card-stat.stat-amber {
+    background: #FFFBEB;
+    border: 2px solid #FDE68A;
+}
+
+.stat-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.stat-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #6B7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1F2937;
+    margin: 2px 0;
+}
+
+.stat-sub {
+    font-size: 11px;
+    color: #9CA3AF;
+}
+
+/* Table Card Sesuai Admin */
+.table-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 18px;
+    padding: 22px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.table-header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.table-header-box h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px;
+    color: #721B2F;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    text-align: left;
+}
+
+.user-table th {
+    padding: 10px 14px;
+    background: #FAF3DE;
+    color: #721B2F;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    border-bottom: 1.5px solid #E5E7EB;
+}
+
+.user-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #F3F4F6;
+    vertical-align: middle;
+}
+
+.user-table tr:hover {
+    background: #FAFAFA;
+}
+
+.badge-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 8px;
+    border-radius: 9999px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.badge-emerald { background: #D1FAE5; color: #065F46; border: 1px solid #A7F3D0; }
+.badge-amber { background: #FEF3C7; color: #92400E; border: 1px solid #FDE68A; }
+.badge-maroon { background: #FAF3DE; color: #721B2F; border: 1px solid #E3D5B4; }
+
+/* Order Spotlight Card */
+.order-spotlight {
+    background: #FFFFFF;
+    border-radius: 18px;
+    border: 1px solid #E5E7EB;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.spotlight-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #F3F4F6;
+    margin-bottom: 18px;
+}
+
+.spotlight-header h2 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1F2937;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.badge-order-no {
+    background: #FAF3DE;
+    color: #721B2F;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    border: 1px solid #E3D5B4;
+}
+
+.progress-steps-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    position: relative;
+}
+
+.step-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    text-align: center;
+}
+
+.step-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #E5E7EB;
+    color: #9CA3AF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 13px;
+    margin-bottom: 6px;
+    transition: all 0.3s;
+}
+
+.step-node.completed .step-circle {
+    background: #10B981;
+    color: #FFFFFF;
+}
+
+.step-node.active .step-circle {
+    background: #721B2F;
+    color: #FFFFFF;
+    box-shadow: 0 0 0 4px #FAF3DE;
+}
+
+.step-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #6B7280;
+    max-width: 90px;
+}
+
+.step-node.active .step-label {
+    color: #721B2F;
+    font-weight: 700;
+}
+
+/* Action Quick Links */
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.action-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 20px;
+    text-decoration: none;
+    color: #1F2937;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.action-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(114, 27, 47, 0.06);
+    border-color: #721B2F;
+}
+
+.action-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 10px 0 4px;
+    color: #721B2F;
+}
+
+.action-card p {
+    font-size: 12px;
+    color: #6B7280;
+    line-height: 1.5;
+}

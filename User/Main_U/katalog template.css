@@ -1,0 +1,609 @@
+/* =========================
+   HEADER
+   ========================= */
+
+.catalog-header {
+    margin-bottom: 24px;
+}
+
+.catalog-header h1 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1F2937;
+}
+
+.catalog-header p {
+    font-size: 14px;
+    color: #6B7280;
+    margin-top: 4px;
+    line-height: 1.5;
+}
+
+/* =========================
+   FILTER KATEGORI
+   ========================= */
+
+.filter-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 22px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scrollbar-width: thin;
+}
+
+.filter-btn {
+    padding: 9px 18px;
+    border-radius: 12px;
+    background: #FFF;
+    border: 1px solid #E3D5B4;
+    color: #4B5563;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all .2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #721B2F;
+    color: #FFF;
+    border-color: #721B2F;
+    box-shadow: 0 4px 10px rgba(114,27,47,.15);
+}
+
+/* =========================
+   GRID KATALOG
+   ========================= */
+
+.templates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+    width: 100%;
+}
+
+/* =========================
+   KARTU TEMPLATE
+   ========================= */
+
+.template-card {
+    width: 100%;
+    min-width: 0;
+    background: #FFF;
+    border-radius: 16px;
+    border: 1px solid #E3E5E9;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,.04);
+    display: flex;
+    flex-direction: column;
+    transition: all .25s ease;
+    box-sizing: border-box;
+}
+
+.template-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(114,27,47,.10);
+    border-color: #721B2F;
+}
+
+/* =========================
+   GAMBAR TEMPLATE
+   ========================= */
+
+.template-thumb {
+    position: relative;
+    width: 100%;
+    height: 162px;
+    min-height: 162px;
+    background: #FAF3DE;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.template-thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s ease;
+}
+
+.template-card:hover .template-thumb img {
+    transform: scale(1.04);
+}
+
+/* Placeholder gambar */
+
+.template-thumb .template-image-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FAF3DE;
+    color: #701C2F;
+    text-align: center;
+    padding: 16px;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+
+/* =========================
+   LABEL KATEGORI
+   ========================= */
+
+.category-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(114,27,47,.92);
+    color: #FAF3DE;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 9px;
+    border-radius: 7px;
+    backdrop-filter: blur(4px);
+}
+
+/* =========================
+   BODY KARTU
+   ========================= */
+
+.template-body {
+    padding: 14px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    box-sizing: border-box;
+}
+
+.template-body h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1F2937;
+    margin: 0 0 6px;
+    line-height: 1.4;
+}
+
+.template-features {
+    font-size: 12px;
+    color: #6B7280;
+    margin: 0 0 12px;
+    line-height: 1.5;
+}
+
+/* =========================
+   HARGA
+   ========================= */
+
+.template-price-row {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.price-main {
+    font-size: 16px;
+    font-weight: 800;
+    color: #721B2F;
+}
+
+.price-discount {
+    font-size: 12px;
+    color: #9CA3AF;
+    text-decoration: line-through;
+}
+
+/* =========================
+   TOMBOL AKSI
+   ========================= */
+
+.template-actions {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+.btn-demo,
+.btn-order-tpl {
+    font-family: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 36px;
+    padding: 9px 10px;
+    border-radius: 9px;
+    font-size: 11px;
+    font-weight: 700;
+    transition: all .2s;
+}
+
+.btn-demo {
+    flex: 1;
+    border: 1px solid #721B2F;
+    color: #721B2F;
+    background: transparent;
+}
+
+.btn-demo:hover {
+    background: #FAF3DE;
+}
+
+.btn-order-tpl {
+    flex: 1.3;
+    border: 0;
+    background: #721B2F;
+    color: #FFF;
+}
+
+.btn-order-tpl:hover {
+    background: #501320;
+}
+
+/* =========================================================
+   MODAL LIVE DEMO
+   ========================================================= */
+
+.live-demo-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 100100;
+    background: rgba(15,23,42,.78);
+    backdrop-filter: blur(5px);
+    padding: clamp(8px,2vw,24px);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+
+.live-demo-dialog {
+    width: min(1500px,100%);
+    height: min(94vh,1000px);
+    background: #FFF;
+    border: 1px solid #E5D7B7;
+    border-radius: 18px;
+    box-shadow: 0 24px 80px rgba(0,0,0,.35);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.live-demo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 20px;
+    background: #FAF3DE;
+    border-bottom: 1px solid #E5D7B7;
+    flex-shrink: 0;
+}
+
+.live-demo-heading {
+    min-width: 0;
+}
+
+.live-demo-heading h2 {
+    margin: 0;
+    color: #701C2F;
+    font-size: 18px;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+.live-demo-heading p {
+    margin: 4px 0 0;
+    color: #6B7280;
+    font-size: 12px;
+}
+
+.live-demo-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.live-demo-external {
+    font-size: 12px;
+    font-weight: 700;
+    color: #701C2F;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.live-demo-external:hover {
+    text-decoration: underline;
+}
+
+.live-demo-close {
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(112,28,47,.1);
+    color: #701C2F;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.live-demo-close:hover {
+    background: #701C2F;
+    color: #FFF;
+}
+
+.live-demo-status {
+    padding: 8px 16px;
+    background: #F9FAFB;
+    color: #4B5563;
+    font-size: 12px;
+    border-bottom: 1px solid #E5E7EB;
+    flex-shrink: 0;
+}
+
+.live-demo-status.is-loading {
+    color: #701C2F;
+}
+
+.live-demo-status.is-loading:before {
+    content: '';
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border: 2px solid #D4AF37;
+    border-top-color: #701C2F;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: liveDemoSpin .8s linear infinite;
+}
+
+.live-demo-status.is-error {
+    background: #FEF2F2;
+    color: #991B1B;
+}
+
+.live-demo-frame-wrap {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+    background: #F3F4F6;
+}
+
+.live-demo-frame-wrap iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border: 0;
+    background: #FFF;
+}
+
+.live-demo-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 16px;
+    background: #FFF;
+    border-top: 1px solid #E5E7EB;
+    color: #6B7280;
+    font-size: 11px;
+    flex-shrink: 0;
+}
+
+.live-demo-fallback {
+    border: 1px solid #701C2F;
+    border-radius: 8px;
+    background: #FFF;
+    color: #701C2F;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 8px 12px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.live-demo-fallback:hover {
+    background: #FAF3DE;
+}
+
+body.live-demo-open {
+    overflow: hidden;
+}
+
+@keyframes liveDemoSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================================================
+   MODAL DATA AWAL
+   ========================================================= */
+
+.modal-data-awal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.modal-data-awal-card {
+    background: #FFF;
+    width: 100%;
+    max-width: 580px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 20px;
+    border: 1px solid #E5D7B7;
+    box-shadow: 0 20px 40px rgba(112,28,47,.2);
+    padding: 26px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   RESPONSIVE TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .templates-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        gap: 18px;
+    }
+
+    .template-thumb {
+        height: 162px;
+        min-height: 162px;
+    }
+
+}
+
+/* =========================================================
+   RESPONSIVE HP
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .catalog-header h1 {
+        font-size: 21px;
+    }
+
+    .catalog-header p {
+        font-size: 13px;
+    }
+
+    .templates-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        gap: 12px;
+    }
+
+    .template-card {
+        border-radius: 13px;
+    }
+
+    .template-thumb {
+        height: 145px;
+        min-height: 145px;
+    }
+
+    .template-body {
+        padding: 11px;
+        gap: 10px;
+    }
+
+    .template-body h3 {
+        font-size: 13px;
+    }
+
+    .template-features {
+        font-size: 11px;
+    }
+
+    .price-main {
+        font-size: 14px;
+    }
+
+    .template-actions {
+        gap: 6px;
+    }
+
+    .btn-demo,
+    .btn-order-tpl {
+        padding: 8px 5px;
+        font-size: 10px;
+        min-height: 34px;
+    }
+
+    .filter-tabs {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 8px 13px;
+        font-size: 12px;
+    }
+
+    .live-demo-dialog {
+        height: 96vh;
+        border-radius: 12px;
+    }
+
+    .live-demo-header {
+        padding: 10px 12px;
+    }
+
+    .live-demo-heading h2 {
+        font-size: 15px;
+    }
+
+    .live-demo-header-actions {
+        gap: 8px;
+    }
+
+    .live-demo-external {
+        font-size: 11px;
+    }
+
+    .live-demo-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .live-demo-frame-wrap iframe {
+        min-height: 220px;
+    }
+}
+
+/* HP layar kecil */
+
+@media (max-width: 380px) {
+
+    .templates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .template-thumb {
+        height: 162px;
+        min-height: 162px;
+    }
+
+    .template-body h3 {
+        font-size: 15px;
+    }
+
+    .template-actions {
+        gap: 8px;
+    }
+
+    .btn-demo,
+    .btn-order-tpl {
+        font-size: 11px;
+    }
+}

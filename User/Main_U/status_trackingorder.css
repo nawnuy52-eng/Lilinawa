@@ -1,0 +1,386 @@
+/* User/Main_U/status & trackingorder.css - Stylesheet Status & Pelacakan Order LilinNawa */
+:root {
+    --primary-maroon: #701C2F;
+    --primary-maroon-dark: #581423;
+    --gold-accent: #D4AF37;
+    --cream-bg: #FAF3DE;
+    --cream-border: #E5D7B7;
+    --success-green: #059669;
+}
+
+.folder-path {
+    font-size: 11px;
+    font-family: monospace;
+    color: #8A4B58;
+    margin-bottom: 12px;
+}
+
+.order-selector-tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.order-tab-pill {
+    padding: 10px 18px;
+    border-radius: 14px;
+    font-size: 12.5px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1.5px solid #E5D7B7;
+    background: #FFFFFF;
+    color: #701C2F;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.order-tab-pill:hover {
+    border-color: #701C2F;
+    background: #FAF3DE;
+    transform: translateY(-1px);
+}
+
+.order-tab-pill.active {
+    background: #701C2F;
+    color: #FFFFFF;
+    border-color: #701C2F;
+    box-shadow: 0 4px 14px rgba(112, 28, 47, 0.25);
+}
+
+/* KARTU UTAMA TRACKING */
+.tracking-card {
+    background: #FFFFFF;
+    border-radius: 22px;
+    border: 1.5px solid #E5D7B7;
+    padding: 28px 32px;
+    box-shadow: 0 10px 30px rgba(112, 28, 47, 0.05);
+    margin-bottom: 24px;
+}
+
+/* TIMELINE STEPPER 6-STEP */
+.stepper-wrapper {
+    position: relative;
+    margin: 36px 0 32px;
+}
+
+.stepper-progress-track {
+    position: absolute;
+    top: 22px;
+    left: calc(100% / 12);
+    right: calc(100% / 12);
+    height: 5px;
+    background: #E5E7EB;
+    border-radius: 99px;
+    z-index: 1;
+}
+
+.stepper-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #059669, #701C2F);
+    border-radius: 99px;
+    transition: width 0.4s ease;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.step-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding: 0 4px;
+}
+
+.step-number {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 14px;
+    margin-bottom: 12px;
+    transition: all 0.25s ease;
+    background: #FFFFFF;
+    color: #9CA3AF;
+    border: 3px solid #E5E7EB;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.step-title {
+    font-size: 13px;
+    font-weight: 800;
+    color: #374151;
+    margin-bottom: 4px;
+    line-height: 1.25;
+}
+
+.step-desc {
+    font-size: 11px;
+    color: #6B7280;
+    line-height: 1.35;
+    max-width: 145px;
+}
+
+/* State: Completed */
+.step-item.completed .step-number {
+    background: #059669;
+    color: #FFFFFF;
+    border-color: #ECFDF5;
+    box-shadow: 0 4px 14px rgba(5, 150, 105, 0.35);
+}
+.step-item.completed .step-title {
+    color: #065F46;
+    font-weight: 800;
+}
+
+/* Distinct Theme Colors per Step when Active */
+.step-item.step-1.active .step-number { background: #0284C7; color: #FFF; border-color: #E0F2FE; box-shadow: 0 0 0 5px rgba(2, 132, 199, 0.2); transform: scale(1.08); }
+.step-item.step-1.active .step-title { color: #0369A1; font-weight: 800; }
+
+.step-item.step-2.active .step-number { background: #6366F1; color: #FFF; border-color: #EEF2FF; box-shadow: 0 0 0 5px rgba(99, 102, 241, 0.2); transform: scale(1.08); }
+.step-item.step-2.active .step-title { color: #4338CA; font-weight: 800; }
+
+.step-item.step-3.active .step-number { background: #F59E0B; color: #FFF; border-color: #FEF3C7; box-shadow: 0 0 0 5px rgba(245, 158, 11, 0.2); transform: scale(1.08); }
+.step-item.step-3.active .step-title { color: #B45309; font-weight: 800; }
+
+.step-item.step-4.active .step-number { background: #0D9488; color: #FFF; border-color: #CCFBF1; box-shadow: 0 0 0 5px rgba(13, 148, 136, 0.2); transform: scale(1.08); }
+.step-item.step-4.active .step-title { color: #0F766E; font-weight: 800; }
+
+.step-item.step-5.active .step-number { background: #9333EA; color: #FFF; border-color: #F3E8FF; box-shadow: 0 0 0 5px rgba(147, 51, 234, 0.2); transform: scale(1.08); }
+.step-item.step-5.active .step-title { color: #7E22CE; font-weight: 800; }
+
+.step-item.step-6.active .step-number, .step-item.step-6.completed .step-number { background: #059669; color: #FFF; border-color: #D1FAE5; box-shadow: 0 0 0 5px rgba(5, 150, 105, 0.2); transform: scale(1.08); }
+.step-item.step-6.active .step-title, .step-item.step-6.completed .step-title { color: #065F46; font-weight: 800; }
+
+/* Buttons in card */
+.btn-track-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+}
+.btn-track-primary {
+    background: #059669;
+    color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+}
+.btn-track-primary:hover {
+    background: #047857;
+    transform: translateY(-1px);
+}
+.btn-track-secondary {
+    background: #FAF3DE;
+    color: #701C2F;
+    border: 1.5px solid #E5D7B7;
+}
+.btn-track-secondary:hover {
+    background: #701C2F;
+    color: #FFFFFF;
+    border-color: #701C2F;
+}
+.btn-track-outline {
+    background: #FFFFFF;
+    color: #374151;
+    border: 1.5px solid #D1D5DB;
+}
+.btn-track-outline:hover {
+    background: #F9FAFB;
+    border-color: #9CA3AF;
+}
+.btn-track-danger {
+    background: #FFF1F2;
+    color: #BE123C;
+    border: 1.5px solid #FECDD3;
+}
+.btn-track-danger:hover {
+    background: #BE123C;
+    color: #FFFFFF;
+}
+
+/* Modals */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(5px);
+    z-index: 99999;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    box-sizing: border-box;
+}
+.modal-content {
+    background: #FFFFFF;
+    width: 100%;
+    max-width: 620px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 22px;
+    padding: 28px;
+    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.4);
+    border: 1px solid #E5D7B7;
+    box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+    .steps-container {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 24px;
+    }
+    .stepper-progress-track {
+        display: none;
+    }
+}
+@media (max-width: 580px) {
+    .steps-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .tracking-card {
+        padding: 20px 16px;
+    }
+}
+
+/* KOTAK PENERIMAAN LINK WEBSITE UNDANGAN */
+.result-website-card {
+    border-radius: 20px;
+    padding: 24px 28px;
+    margin-top: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    position: relative;
+    border: 2px solid;
+    transition: all 0.25s ease;
+}
+.result-website-card.draft-ready {
+    background: linear-gradient(135deg, #FFFDF8 0%, #FAF3DE 100%);
+    border-color: #D4AF37;
+}
+.result-website-card.final-ready {
+    background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+    border-color: #059669;
+}
+.badge-link-status {
+    font-size: 10.5px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 3px 10px;
+    border-radius: 99px;
+}
+.badge-draft {
+    background: #FEF3C7;
+    color: #92400E;
+    border: 1px solid #FCD34D;
+}
+.badge-final {
+    background: #059669;
+    color: #FFFFFF;
+}
+.url-display-box {
+    background: #FFFFFF;
+    border: 1.5px solid #E5D7B7;
+    border-radius: 14px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    margin-bottom: 4px;
+}
+.url-link-text {
+    font-family: monospace;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #701C2F;
+    text-decoration: none;
+    word-break: break-all;
+    display: block;
+}
+.url-link-text:hover {
+    text-decoration: underline;
+    color: #059669;
+}
+.btn-copy-url {
+    background: #FAF3DE;
+    color: #701C2F;
+    border: 1px solid #D4AF37;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 11.5px;
+    font-weight: 800;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+.btn-copy-url:hover {
+    background: #701C2F;
+    color: #FFFFFF;
+    border-color: #701C2F;
+}
+.btn-open-website {
+    background: #701C2F;
+    color: #FFFFFF;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 12.5px;
+    font-weight: 800;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    box-shadow: 0 4px 14px rgba(112, 28, 47, 0.25);
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+.btn-open-website:hover {
+    background: #581423;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(112, 28, 47, 0.35);
+}
+.btn-wa-action {
+    background: #25D366;
+    color: #FFFFFF;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+.btn-wa-action:hover {
+    background: #1EBE5D;
+    transform: translateY(-1px);
+}

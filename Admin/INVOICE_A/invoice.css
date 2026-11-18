@@ -1,0 +1,16 @@
+.invoice-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .invoice-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.printable-invoice {
+    transition: all 0.2s ease;
+}

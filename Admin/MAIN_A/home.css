@@ -1,0 +1,119 @@
+.welcome-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 18px;
+    padding: 24px 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+}
+
+.welcome-header h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 26px;
+    color: #701C2F;
+    font-weight: 800;
+}
+
+.welcome-header p {
+    font-size: 13px;
+    color: #6B7280;
+    margin-top: 4px;
+}
+
+.quick-header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* 4 Statistik */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.card-stat {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-stat:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-stat.highlight-stat {
+    border-color: #FCD34D;
+    background: #FFFDF7;
+}
+
+.stat-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.stat-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #6B7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+.stat-value {
+    font-size: 22px;
+    font-weight: 800;
+    color: #701C2F;
+    font-family: 'Playfair Display', Georgia, serif;
+    margin: 2px 0;
+}
+
+.stat-sub {
+    font-size: 11px;
+    color: #9CA3AF;
+}
+
+.table-header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.table-header-box h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px;
+    color: #701C2F;
+}
+
+/* Reviews Grid Mini */
+.reviews-grid-mini {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 14px;
+}
+
+.mini-review-card {
+    background: #FAF3DE;
+    border: 1px solid #E2D3AF;
+    border-radius: 12px;
+    padding: 14px;
+}
